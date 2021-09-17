@@ -16,17 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MDH-4e-Abl">
-                                <rect key="frame" x="0.0" y="44" width="375" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Efficient"/>
-                                    <segment title="Non-Efficient"/>
-                                </segments>
-                                <connections>
-                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="WDc-kz-xQJ"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH8-wF-2SE">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -38,13 +27,26 @@
                                     <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XK6-Xx-t6Y"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MDH-4e-Abl">
+                                <rect key="frame" x="0.0" y="44" width="375" height="32"/>
+                                <segments>
+                                    <segment title="Efficient"/>
+                                    <segment title="Non-Efficient"/>
+                                </segments>
+                                <connections>
+                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="WDc-kz-xQJ"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gH8-wF-2SE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3bt-Z3-wIe"/>
+                            <constraint firstItem="MDH-4e-Abl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6g4-VJ-LOt"/>
                             <constraint firstItem="gH8-wF-2SE" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ThP-dF-Gah"/>
                             <constraint firstItem="gH8-wF-2SE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cYb-eC-UfV"/>
+                            <constraint firstItem="MDH-4e-Abl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hAy-We-BPv"/>
+                            <constraint firstItem="MDH-4e-Abl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xS7-eQ-PIc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qlr-U0-HCO"/>
